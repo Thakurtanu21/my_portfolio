@@ -92,6 +92,31 @@
         .skill-box h2 {
             color: rgb(103, 141, 255);
         }
+        .skill-logo {
+            width: 40px;
+            height: 40px;
+        }
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: auto;
+            width: 80%;
+            padding-top: 20px;
+        }
+        .project-box {
+            background: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-box:hover {
+            transform: scale(1.05);
+        }
+        .project-box h2 {
+            color: rgb(103, 141, 255);
+        }
         .contact-form {
             max-width: 500px;
             margin: auto;
@@ -174,34 +199,44 @@
         </div>
     </div>
 
-    <!-- Skills Section -->
     <div id="skills" class="section">
         <h1>My Skills</h1>
-        <div class="skills">
-            <div class="skill-box">
-                <h2>Node.js</h2>
-                <p>Intermediate proficiency in Node.js, skilled in building server-side applications and RESTful APIs.</p>
-            </div>
-            <div class="skill-box">
-                <h2>Express.js</h2>
-                <p>Basic understanding of Express.js and motivated to expand proficiency in building web applications with Node.js.</p>
-            </div>
-            <div class="skill-box">
-                <h2>C Language</h2>
-                <p>Intermediate proficiency in C language, experienced in low-level programming and system design.</p>
-            </div>
-            <div class="skill-box">
-                <h2>Database Management System</h2>
-                <p>Intermediate proficiency in Database Management Systems, continuously expanding knowledge to optimize data storage and retrieval.</p>
-            </div>
+        <div class="skills-container">
+            <div class="skill-box"><img src="java-logo.png" alt="Java" class="skill-logo"><h2>Java</h2><p>Intermediate proficiency in Java, actively enhancing skills to develop robust software solutions.</p></div>
+            <div class="skill-box"><img src="dsa-logo.png" alt="DSA" class="skill-logo"><h2>Data Structures & Algorithms</h2><p>Intermediate proficiency in Data Structures and Algorithms, capable of solving complex problems efficiently.</p></div>
+            <div class="skill-box"><img src="react-logo.png" alt="React" class="skill-logo"><h2>React.js</h2><p>Intermediate proficiency in React.js, skilled in building reusable components and dynamic user interfaces.</p></div>
+            <div class="skill-box"><img src="js-logo.png" alt="JavaScript" class="skill-logo"><h2>JavaScript</h2><p>Intermediate proficiency in JavaScript, experienced in building interactive and dynamic web applications.</p></div>
+            <div class="skill-box"><img src="html-logo.png" alt="HTML" class="skill-logo"><h2>HTML</h2><p>Intermediate proficiency in HTML, skilled in structuring and styling web content for optimal user experience.</p></div>
+            <div class="skill-box"><img src="css-logo.png" alt="CSS" class="skill-logo"><h2>CSS</h2><p>Intermediate proficiency in CSS, experienced in crafting responsive and visually appealing web designs.</p></div>
+            <div class="skill-box"><img src="c-logo.png" alt="C++" class="skill-logo"><h2>C Language</h2><p>Intermediate proficiency in C language, experienced in low-level programming and system design.</p></div>
+            <div class="skill-box"><img src="dbms-logo.png" alt="DBMS" class="skill-logo"><h2>Database Management Systems</h2><p>Intermediate proficiency in Database Management Systems, continuously expanding knowledge to optimize data storage and retrieval.</p></div>
+            <div class="skill-box"><img src="kotlin-logo.png" alt="Kotlin" class="skill-logo"><h2>Kotlin</h2><p>Beginner in Kotlin, actively learning to leverage its modern features for Android app development.</p></div>
         </div>
     </div>
 
     <!-- Projects Section -->
     <div id="projects" class="section">
         <h1>Projects</h1>
-        <p>Coming soon...</p>
+        <div class="projects-container">
+            <div class="project-box">
+                <h2>Personal Portfolio Website</h2>
+                <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+            </div>
+            <div class="project-box">
+                <h2>Secure Login System</h2>
+                <p>Created a secure login authentication system with password hashing and user session management.</p>
+            </div>
+            <div class="project-box">
+                <h2>To-Do List App</h2>
+                <p>Built a to-do list web app using React.js and Node.js, allowing users to manage daily tasks efficiently.</p>
+            </div>
+            <div class="project-box">
+                <h2>Network Security Analyzer</h2>
+                <p>Designed a tool to monitor and analyze network traffic for potential security threats.</p>
+            </div>
+        </div>
     </div>
+
 
     <!-- Contact Section -->
     <div id="contact" class="section">
