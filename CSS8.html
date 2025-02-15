@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            width: 100%;
+            justify-content: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .navbar a:hover {
+            color: rgb(103, 141, 255);
+        }
+        .section {
+            display: none;
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+        .active {
+            display: block;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .about-me {
+            text-align: left;
+            max-width: 50%;
+        }
+        .about-me h1 {
+            font-size: 3rem;
+        }
+        .highlight {
+            color: rgb(220, 255, 103);
+        }
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border: 5px solid black;
+            border-radius: 50%;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 30px;
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+        .skill-box {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+        .skill-box:hover {
+            transform: scale(1.05);
+        }
+        .skill-box h2 {
+            color: rgb(103, 141, 255);
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(103, 141, 255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .contact-form button:hover {
+            background: rgb(80, 120, 240);
+        }
+        .footer-section {
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .footer-social-icon {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .footer-social-icon a {
+            color: #fff;
+            font-size: 1rem;
+            
+        }
+        .footer-social-icon a:hover {
+            color: rgb(103, 141, 255);
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <img src="Tlogo.jpg" alt="Logo" class="logo">
+    <ul class="navbar">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('skills')">Skills</a></li>
+        <li><a onclick="showSection('projects')">Projects</a></li>
+        <li><a onclick="showSection('contact')">Contact Me</a></li>
+    </ul>
+
+    <!-- Home Section -->
+    <div id="home" class="section active">
+        <div class="container">
+            <div class="about-me">
+                <h1>Hello, I'm <span class="highlight">Tanu</span></h1>
+                <p>I'm a passionate Software Developer and Cybersecurity Professional
+                committed to building secure, efficient, and innovative digital 
+                solutions.With a foundation in both software development and information
+                security, I have a unique perspective on creating applications
+                that prioritize both functionality and security.</p>
+            </div>
+            <img src="hacker.png" alt="Profile Picture" class="profile-image">
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills" class="section">
+        <h1>My Skills</h1>
+        <div class="skills">
+            <div class="skill-box">
+                <h2>Node.js</h2>
+                <p>Intermediate proficiency in Node.js, skilled in building server-side applications and RESTful APIs.</p>
+            </div>
+            <div class="skill-box">
+                <h2>Express.js</h2>
+                <p>Basic understanding of Express.js and motivated to expand proficiency in building web applications with Node.js.</p>
+            </div>
+            <div class="skill-box">
+                <h2>C Language</h2>
+                <p>Intermediate proficiency in C language, experienced in low-level programming and system design.</p>
+            </div>
+            <div class="skill-box">
+                <h2>Database Management System</h2>
+                <p>Intermediate proficiency in Database Management Systems, continuously expanding knowledge to optimize data storage and retrieval.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="section">
+        <h1>Projects</h1>
+        <p>Coming soon...</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h1>Contact Me</h1>
+        <form class="contact-form" onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Your Phone" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Footer (Social Media Icons) -->
+        <footer class="footer-section">
+            <div class="footer-social-icon">
+                <a href="https://www.linkedin.com/in/tanu-kumari-482528255" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <a href="https://www.linkedin.com/in/tanu-kumari-482528255" target="_blank" >
+            <img src="linkldn.png" alt="Linkldn" class="Linkldn-id" style="width: 40px; height: 40px;">
+            </a>
+
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
+            <img src="git.png" alt="Github" class="Github-id" style="width: 40px; height: 40px;">
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+        }
+    </script>
+
+</body>
+</html>
