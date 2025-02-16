@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            margin: 50px auto;
+            animation: heartbeat 1s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before { top: -50px; left: 0; }
+        .heart::after { left: 50px; top: 0; }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(-45deg); }
+            50% { transform: scale(1.2) rotate(-45deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: white;
+            color: #ff5e78;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff5e78;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Floating hearts animation */
+        .floating-heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: floatUp 5s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Fireworks Effect */
+        .fireworks {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: gold;
+            border-radius: 50%;
+            animation: explode 1s ease-out forwards;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(10); opacity: 0; }
+        }
+
+        /* Love Letter */
+        .love-letter {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: #ff5e78;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 22px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: popUp 0.5s ease-out;
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.5) translate(-50%, -50%); opacity: 0; }
+            to { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="heart"></div>
+        <h1>Happy Valentine's Day!</h1>
+        <button id="revealMessage">Click for a Surprise</button>
+        <p id="hiddenMessage" class="hidden">You are loved more than words can express! ❤️</p>
+        <div id="loveLetter" class="love-letter">💌 I love you forever and always! 💕</div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundjay.com/free-music/sounds/love-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Play music when user clicks the button
+        document.getElementById('revealMessage').addEventListener('click', function () {
+            document.getElementById('hiddenMessage').classList.toggle('hidden');
+            document.getElementById('loveLetter').style.display = "block";
+
+            let music = document.getElementById("bgMusic");
+            music.play();
+
+            createFireworks();
+        });
+
+        // Function to create floating hearts
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.innerHTML = '❤️';
+            document.body.appendChild(heart);
+
+            const randomX = Math.random() * window.innerWidth;
+            heart.style.left = `${randomX}px`;
+
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+
+        // Generate floating hearts every 500ms
+        setInterval(createFloatingHeart, 500);
+
+        // Fireworks Effect
+        function createFireworks() {
+            for (let i = 0; i < 10; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'fireworks';
+                firework.style.left = `${Math.random() * window.innerWidth}px`;
+                firework.style.top = `${Math.random() * window.innerHeight}px`;
+                document.body.appendChild(firework);
+
+                setTimeout(() => { firework.remove(); }, 1000);
+            }
+        }
+    </script>
+
+</body>
+</html>
