@@ -1,8 +1,0 @@
-POST http://172.26.54.106:5626/authenticate
-Content-Type: application/json
-{
-   "hold_time":0.12
-   "keystrokes": ABCD"
-   
-
-}
