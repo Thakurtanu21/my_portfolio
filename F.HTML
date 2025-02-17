@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="form.css">
+    
+    
+</head>
+<body>
+    <div class="container"
+     <form action="" method="get">
+        <PY-Script src="FILE.PY"></PY-Script>
+        <h1 class="main_heading">Payment Form</h1>
+        <h1>Contact information</h1>
+        <p>Required Field are followed by *</p>
+        <p>Name: *
+            <input type="text" name="name" placeholder="Tanu" required></p>
+        <fieldset>
+            <legend>Gender</legend>
+           <p>
+            Male <input type="radio" name="Gender"id="male">
+            Female <input type="radio" name="Gender"id="female">
+          </p>
+        </fieldset> 
+        <p> Address: <textarea name="address" id="address" cols="100" rows="9"></textarea></p>
+        <p>Email :* <input type="email" name="email" id="email"  placeholder="omg1gmail.com" required></p>
+        <p>Pincode :<input type="number" name="pincode" id="pincode" placeholder="845435"></p>
+        <h2>payment information</h2>
+        <p>
+            Card Type:*
+            <select name="card_type" id="card_type" required>
+                <option value="">...select a card type...></option>
+                <option value="Visa">Visa</option> 
+                <option value="master card">Master card</option>
+                <option value="Rupay">Rupay</option>
+            </select>
+        </p>
+        <p>
+            Card Number:* <input type="number" name="card_number" id="card_number" placeholder="746545468" required>
+        </p>
+        <p>
+            Expiration Date:<input type="date" name="exp-date" id="exp_date">
+        </p>
+        <P>CVV <input type="password" name="cvv" id="cvv" placeholder="137628751"></P>
+        <input type="submit" value="pay now">
+    </form>
+    <iframe src="FILE.PY"></iframe>
+</body>
+</html>
