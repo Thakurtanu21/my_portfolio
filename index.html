@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: black;
-            color: #fff;
-            text-align: center;
-        }
+
         .navbar {
             position: fixed;
             top: 0;
@@ -240,14 +224,7 @@
 
     <!-- Contact Section -->
     <div id="contact" class="section">
-        <h1>Contact Me</h1>
-        <form class="contact-form" onsubmit="submitForm(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="tel" id="phone" placeholder="Your Phone" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+        
 
         <!-- Footer (Social Media Icons) -->
         <footer class="footer-section">
@@ -264,23 +241,5 @@
             <img src="linkldn.png" alt="Linkldn" class="Linkldn-id" style="width: 40px; height: 40px;">
             </a>
 
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
-            <img src="git.png" alt="Github" class="Github-id" style="width: 40px; height: 40px;">
-            </a>
-        </footer>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-        }
-
-        function submitForm(event) {
-            event.preventDefault();
-            alert("Form submitted successfully!");
-        }
-    </script>
-
-</body>
+            <
 </html>
